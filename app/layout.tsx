@@ -3,7 +3,6 @@ import localFont from "next/font/local"
 
 import "./globals.css"
 import { LenisProvider } from "@/components/providers/lenis-provider"
-import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
@@ -37,9 +36,7 @@ export default function RootLayout({
       )}
     >
       <body>
-        <ThemeProvider>
-          <LenisProvider>{children}</LenisProvider>
-        </ThemeProvider>
+        <LenisProvider>{children}</LenisProvider>
       </body>
     </html>
   )

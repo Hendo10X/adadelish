@@ -64,7 +64,11 @@ export function Places() {
           >
             <p
               className="pointer-events-none m-0 px-6 py-2 text-[8vw] leading-[1.05] uppercase md:px-16 md:text-[5vw]"
-              style={{ fontFamily: inter, fontWeight: 700 }}
+              style={{
+                fontFamily: inter,
+                fontWeight: 700,
+                color: "#000",
+              }}
             >
               {place.name}
             </p>
