@@ -34,9 +34,10 @@ export function CurtainButton({
         backgroundColor: isOutline ? "transparent" : BRAND,
         borderColor: isOutline ? BRAND : undefined,
         fontFamily: obviously,
+        WebkitTapHighlightColor: "transparent",
       }}
       className={cn(
-        "group/curtain relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-2.5 text-[14px] tracking-[0.04em] uppercase outline-none transition-transform duration-200 focus:outline-none focus-visible:outline-none active:scale-[0.96]",
+        "group/curtain relative inline-flex appearance-none items-center justify-center overflow-hidden rounded-full px-6 py-2.5 text-[14px] tracking-[0.04em] uppercase no-underline outline-none ring-0 transition-transform duration-200 focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 active:scale-[0.96]",
         isOutline ? "border-[1.5px]" : "border-0",
         className
       )}
@@ -49,13 +50,13 @@ export function CurtainButton({
           borderTopLeftRadius: "50%",
           borderTopRightRadius: "50%",
         }}
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 translate-y-full transition-transform duration-[550ms] ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/curtain:translate-y-0"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 translate-y-full transition-transform duration-550 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover/curtain:translate-y-0"
       />
       <span
         className={cn(
-          "relative z-10 transition-colors duration-[450ms] ease-[cubic-bezier(0.76,0,0.24,1)]",
+          "relative z-10 transition-colors duration-450 ease-[cubic-bezier(0.76,0,0.24,1)]",
           isOutline
-            ? "text-[#FF3207] group-hover/curtain:text-white"
+            ? "text-brand group-hover/curtain:text-white"
             : "text-white"
         )}
       >

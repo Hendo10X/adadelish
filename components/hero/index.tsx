@@ -4,7 +4,11 @@ import { useLayoutEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
+import { CurtainButton } from "@/components/ui/curtain-button"
+
 import { PlayPauseButton } from "./play-pause-button"
+
+const obviously = "var(--font-obviously), system-ui, sans-serif"
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger)
@@ -107,6 +111,28 @@ export function Hero() {
             playsInline
             className="h-full w-full object-cover"
           />
+
+          {/* Gradient wash for headline legibility */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/60 via-black/15 to-transparent"
+          />
+
+          {/* Headline + CTA */}
+          <div className="absolute right-6 bottom-6 left-6 z-10 max-w-[780px] md:right-auto md:bottom-14 md:left-14">
+            <h1
+              className="text-[48px] leading-[1.05] font-black tracking-[0] text-white uppercase md:text-[88px]"
+              style={{ fontFamily: obviously }}
+            >
+              Bold Flavors,
+              <br />
+              Big Stories.
+            </h1>
+            <div className="mt-8 md:mt-10">
+              <CurtainButton href="#features">See the Menu</CurtainButton>
+            </div>
+          </div>
+
           <PlayPauseButton isPlaying={isPlaying} onToggle={handleToggle} />
         </div>
       </div>

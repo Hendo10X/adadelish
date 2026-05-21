@@ -94,7 +94,7 @@ export function Story() {
       <div className="mx-auto flex w-full max-w-[1280px] flex-col items-start gap-12 md:flex-row md:items-center md:gap-20">
         <div className="w-full md:flex-1">
           <h2
-            className="text-[40px] leading-[1.1] font-black tracking-[0] uppercase md:text-[72px]"
+            className="text-[40px] leading-[0.95] font-black tracking-[0] uppercase md:text-[72px]"
             style={{ color: BRAND, fontFamily: obviously }}
           >
             {story.heading.map((line, i) => (
